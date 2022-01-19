@@ -29,7 +29,6 @@ export default {
             if( images.length > 0 ) return images[0]['path'] + '/portrait_uncanny.' +images[0]['extension']
             return 'https://i.annihil.us/u/prod/marvel/i/mg/f/40/5a8c9d8be1c0b/standard_incredible.jpg'
         }
-        console.log(comics.value)
         return{
             comics,
             getImageUrl,

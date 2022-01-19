@@ -17,7 +17,6 @@ const characters = ()=>{
         const lazy = Math.round(document.getElementById('elementLazy').offsetHeight * 0.5)
         let scroll=window.pageYOffset
         if( scroll >= lazy && unique===0){
-            console.log('hecho')
             store.dispatch('characters/getCharacter',{ offset:characters.value.length })
             unique=1
         } 
