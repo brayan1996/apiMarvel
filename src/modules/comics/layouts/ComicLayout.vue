@@ -88,4 +88,14 @@ export default {
                 font-weight: bold;
             }
         }
+         @media screen and (max-width:1200px){
+            .comics-grid{
+                gap: 20px 100px;
+            }
+        }
+    @media screen and (max-width:800px){
+      .comics-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 </style>

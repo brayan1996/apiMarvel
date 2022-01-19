@@ -27,7 +27,7 @@ const characters = ()=>{
     return{
       characters,
       goComics:( character )=>{
-        store.dispatch('comics/getComicsFromCharacters',character.comics.items)
+        store.dispatch('comics/getComicsFromCharacters',character.id)
         setTimeout( ()=>{
             router.push({ name:'comicsLayout' , query:{ name:character.name } })
         },400 )

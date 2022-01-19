@@ -38,9 +38,6 @@ export default {
         if(characterEspecific.value.length > 0) return characterEspecific.value
         return characters.value
     } )
-    // const arrange = () =>{
-    //     characterEspecific.value = []
-    // }
     return{
         goComics,
         characters,
@@ -55,7 +52,7 @@ export default {
         margin-left: auto;
         margin-right: auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 25%);
         gap: 20px 180px;
         .img{
             margin-bottom: 20px;
@@ -73,6 +70,11 @@ export default {
                 height: 40px;
                 padding-top: 20px;
                 margin-bottom: 0;
+            }
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
             }
             .redirection{
                 position: absolute;
@@ -92,5 +94,15 @@ export default {
                 opacity: 1;
             }
         }
+    }
+     @media screen and (max-width:1200px){
+      .img-grid{
+        gap: 20px 100px;
+      }
+    }
+    @media screen and (max-width:800px){
+      .img-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 </style>
